@@ -276,21 +276,3 @@ This project demonstrates:
 
 ---
 
-## 👩‍💻 Author
-
-### Alisha Fatima
-
-**Computer Science Student | MERN Stack Developer | Generative AI Enthusiast**
-
-GitHub: https://github.com/Alishaa-987
-
-LinkedIn: https://www.linkedin.com/in/alisha-fatima-08416729a/
-
----
-
-## ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
-
----
-**Built with ❤️ by Alisha Fatima**
