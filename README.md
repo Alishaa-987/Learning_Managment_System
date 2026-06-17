@@ -1,3 +1,4 @@
+<img width="1881" height="919" alt="Screenshot 2026-02-03 085702" src="https://github.com/user-attachments/assets/f50c7230-6ebc-4555-9e54-687228b128e1" />
 # 🎓 Learning Management System
 
 ![Learning Management System](assets/screenshots/admin-dashboard.png)
@@ -211,9 +212,7 @@ Learning_Managment_System/
 
 ---
 
-## 📸 Application Screenshots
 
-Store screenshots in:
 
 ```text
 assets/screenshots/
@@ -222,34 +221,11 @@ assets/screenshots/
 ### Home Page
 
 ```md
-![Home Page](assets/screenshots/home-page.png)
+![Home Page](screenshots/home-page.png)<img width="1881" height="919" alt="Screenshot 2026-02-03 085702" src="https://github.com/user-attachments/assets/d43e128d-3f79-4fea-8ee5-7f23e1a55340" />
+
 ```
 
-### Login Page
 
-```md
-![Login Page](assets/screenshots/login-page.png)
-```
-
-### Student Dashboard
-
-```md
-![Student Dashboard](assets/screenshots/student-dashboard.png)
-```
-
-### Faculty Dashboard
-
-```md
-![Faculty Dashboard](assets/screenshots/faculty-dashboard.png)
-```
-
-### Admin Dashboard
-
-```md
-![Admin Dashboard](assets/screenshots/admin-dashboard.png)
-```
-
----
 
 ## 🔒 Security Features
 
