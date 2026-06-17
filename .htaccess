@@ -1,0 +1,24 @@
+# Student Management System - Security & Configuration
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect uploads directory from direct access (optional - uncomment if needed)
+# <FilesMatch "\.(php|php3|php4|php5|phtml)$">
+#     Order Allow,Deny
+#     Deny from all
+# </FilesMatch>
+
+# Set default charset
+AddDefaultCharset UTF-8
+
+# PHP Settings
+php_value upload_max_filesize 5M
+php_value post_max_size 5M
+php_value max_execution_time 300
+php_value max_input_time 300
+
+# Error handling (disable in production)
+# php_flag display_errors Off
+# php_flag log_errors On
+

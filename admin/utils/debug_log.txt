@@ -1,0 +1,21 @@
+[2026-02-03 04:49:38] POST received: Array
+(
+    [name] => Kahdiga
+    [father_name] => Usman
+    [dob] => 2026-12-05
+    [cnic] => 33102-4563778-9
+    [gender] => Female
+    [email] => khadiga@university.edu
+    [role] => student
+    [adm_date] => 2025-12-31
+    [ag_no] => 2026-AG-10001
+    [department] => Computer Science
+    [degree] => BSAI
+    [class] => Morning
+    [section] => M3
+    [phone_no] => 03123456789
+    [stu_status] => Active
+    [password] => admin123
+    [address] => jhang road
+)
+
