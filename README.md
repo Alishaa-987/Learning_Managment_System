@@ -1,87 +1,320 @@
-# 📚 Learning Management System
+# 🎓 Learning Management System
 
-A comprehensive Student Management System with multi-role support (Student, Admin, Faculty) for managing educational operations including student registration, bookings, news, and faculty management.
+![Learning Management System](assets/screenshots/admin-dashboard.png)
+
+A comprehensive web-based **Learning Management & Student Management System** built using **PHP, MySQL, HTML, CSS, and JavaScript**. The platform provides dedicated portals for **Students, Faculty Members, and Administrators**, enabling efficient management of academic activities, student records, faculty information, event bookings, university announcements, and profile management.
+
+---
+
+## 📌 Overview
+
+The Learning Management System (LMS) is designed to streamline educational institution operations through a centralized digital platform. Students can manage their profiles and bookings, faculty members can access institutional information, and administrators can efficiently manage students, departments, faculty, events, notices, and news.
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication & Authorization
+
+- Secure Login System
+- Student Registration
+- Password Hashing
+- Session Management
+- Role-Based Access Control
+
+### 👨‍🎓 Student Portal
+
+- Student Registration & Login
+- Personalized Dashboard
+- Profile Management
+- Event & Booking Requests
+- View News & Notices
+- Download Booking PDFs
+
+### 👨‍🏫 Faculty Portal
+
+- Faculty Dashboard
+- Faculty Profile Management
+- View University Announcements
+- Access News & Notices
+
+### 👨‍💼 Admin Portal
+
+- Student Management
+- Faculty Management
+- Department Management
+- Event Management
+- News & Notice Management
+- Booking Request Monitoring
+- User Administration
+
+### 📄 PDF Generation
+
+- Automated PDF Generation using FPDF
+- Booking Confirmation Documents
+- Downloadable Records
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+
+- PHP
+
+### Database
+
+- MySQL
+
+### Libraries & Tools
+
+- PDO (Database Connectivity)
+- FPDF (PDF Generation)
+
+### Development Environment
+
+- XAMPP / WAMP
+- Apache Server
+
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - PHP 7.4+
 - MySQL 5.7+
-- Apache with `.htaccess` support
+- Apache Server
+- XAMPP / WAMP
 
-### Setup
-1. **Clone & Navigate**
-   ```bash
-   git clone https://github.com/Alishaa-987/Learning_Managment_System.git
-   cd Learning_Managment_System
-   ```
+### Clone Repository
 
-2. **Database Setup**
-   - Import `database.sql` into MySQL
-   - Update credentials in `lib/config.php`
-
-3. **Access Points**
-   - **Home:** `public/index.html`
-   - **Login:** `public/login.php` (Students/Admin/Faculty)
-   - **Register:** `public/signup.php` (Students)
-
-## 📂 Project Structure
-
-```
-├── public/              # Web root (HTML, CSS, entry points)
-├── admin/               # Admin dashboard & management
-├── faculty/             # Faculty portal
-├── user/                # Student portal
-├── lib/                 # Database config & utilities
-├── includes/            # Shared libraries (FPDF)
-├── uploads/             # File storage
-├── setup/               # Installation scripts
-└── debug/               # Testing tools (remove before production)
+```bash
+git clone https://github.com/Alishaa-987/Learning_Managment_System.git
+cd Learning_Managment_System
 ```
 
-**For detailed structure:** See [docs/STRUCTURE.md](docs/STRUCTURE.md)
+### Database Setup
 
-## 👥 User Roles
+1. Open **phpMyAdmin**
+2. Create a new database:
 
-| Role | Entry Point | Features |
-|------|-------------|----------|
-| **Student** | `public/login.php` | Dashboard, Bookings, Profile |
-| **Admin** | `public/login.php` | Manage Students, Events, Faculty, News |
-| **Faculty** | `public/login.php` | Dashboard, Profile, News |
+```sql
+student_mgmt
+```
 
-## 🔧 Key Features
+3. Import the provided:
 
-✅ Student registration & authentication  
-✅ Admin dashboard with student management  
-✅ Event booking system  
-✅ News & notices management  
-✅ Faculty management  
-✅ Role-based access control  
-✅ PDF generation (FPDF)  
+```text
+database.sql
+```
 
-## ⚠️ Production Checklist
+### Configure Database Connection
 
-- [ ] Delete `debug/` folder
-- [ ] Secure `setup/` folder
-- [ ] Update file paths if needed
-- [ ] Set proper permissions on `uploads/` (755)
-- [ ] Change default admin password
-- [ ] Test all login flows
+Update database credentials inside:
 
-## 📖 Documentation
+```text
+lib/config.php
+```
 
-- [Full Project Structure](docs/STRUCTURE.md) - Detailed file organization and architecture
+Example:
 
-## 🔐 Security
+```php
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'student_mgmt');
+```
 
-- Password hashing with `password_hash()`
-- PDO prepared statements (SQL injection protection)
-- Role-based access control
+### Run the Application
 
-## 📝 License
+Place the project inside:
 
-Educational Project
+```text
+xampp/htdocs/
+```
+
+Start:
+
+- Apache
+- MySQL
+
+Access the application:
+
+```text
+http://localhost/Learning_Managment_System
+```
 
 ---
 
-**Need help?** Check [docs/STRUCTURE.md](docs/STRUCTURE.md) for detailed setup and troubleshooting.
+## 📂 Project Structure
+
+```text
+Learning_Managment_System/
+│
+├── public/                  # Public entry points
+│   ├── index.html
+│   ├── login.php
+│   └── signup.php
+│
+├── admin/                   # Admin dashboard & management
+│   ├── dashboard.php
+│   ├── students.php
+│   ├── faculty.php
+│   ├── departments.php
+│   ├── events.php
+│   ├── notices.php
+│   └── news.php
+│
+├── faculty/                 # Faculty portal
+│   ├── dashboard.php
+│   ├── notices.php
+│   ├── news.php
+│   └── profile.php
+│
+├── user/                    # Student portal
+│   ├── dashboard.php
+│   ├── booking.php
+│   ├── profile.php
+│   └── process_booking.php
+│
+├── lib/                     # Configuration files
+│   └── config.php
+│
+├── includes/                # Shared libraries
+│   └── fpdf/
+│
+├── uploads/
+│   ├── profile_images/
+│   └── Bookings_Pdf/
+│
+├── setup/
+├── database.sql
+└── README.md
+```
+
+---
+
+## 👥 User Roles
+
+| Role | Access | Features |
+|--------|---------|---------|
+| **Student** | Student Portal | Dashboard, Bookings, Profile Management |
+| **Faculty** | Faculty Portal | Profile Management, News & Notices |
+| **Admin** | Admin Dashboard | Student, Faculty, Department & Event Management |
+
+---
+
+## 📸 Application Screenshots
+
+Store screenshots in:
+
+```text
+assets/screenshots/
+```
+
+### Home Page
+
+```md
+![Home Page](assets/screenshots/home-page.png)
+```
+
+### Login Page
+
+```md
+![Login Page](assets/screenshots/login-page.png)
+```
+
+### Student Dashboard
+
+```md
+![Student Dashboard](assets/screenshots/student-dashboard.png)
+```
+
+### Faculty Dashboard
+
+```md
+![Faculty Dashboard](assets/screenshots/faculty-dashboard.png)
+```
+
+### Admin Dashboard
+
+```md
+![Admin Dashboard](assets/screenshots/admin-dashboard.png)
+```
+
+---
+
+## 🔒 Security Features
+
+- Password Hashing
+- PDO Prepared Statements
+- SQL Injection Protection
+- Session-Based Authentication
+- Role-Based Authorization
+
+---
+
+## ⚠️ Production Checklist
+
+- [ ] Remove Debug Files
+- [ ] Secure Setup Directory
+- [ ] Configure Proper File Permissions
+- [ ] Update Database Credentials
+- [ ] Change Default Admin Credentials
+- [ ] Test All User Workflows
+- [ ] Enable HTTPS in Production
+
+---
+
+## 🎯 Learning Outcomes
+
+This project demonstrates:
+
+- PHP Development
+- CRUD Operations
+- Database Design
+- Authentication & Authorization
+- Session Management
+- Role-Based Access Control
+- PDF Generation
+- University Management Workflows
+
+---
+
+## 🔮 Future Enhancements
+
+- Attendance Management
+- Course Management
+- Online Examination System
+- Assignment Submission Portal
+- Email Notifications
+- Student Performance Analytics
+- AI-Powered Academic Assistant
+
+---
+
+## 👩‍💻 Author
+
+### Alisha Fatima
+
+**Computer Science Student | MERN Stack Developer | Generative AI Enthusiast**
+
+GitHub: https://github.com/Alishaa-987
+
+LinkedIn: https://www.linkedin.com/in/alisha-fatima-08416729a/
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+---
+**Built with ❤️ by Alisha Fatima**
